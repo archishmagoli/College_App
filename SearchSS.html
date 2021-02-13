@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Search</title>
+  </head>
+  <body>
+    <h1>Search</h1>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+            College App
+          </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Health</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Colleges
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">My Colleges Home</a>
+                <a class="dropdown-item" href="#">My Calendar</a>
+                <a class="dropdown-item" href="#">My Checklist</a>
+                <div class="dropdown-divider"></div>
+              <!--<a class="dropdown-item" href="#">Something else here</a> -->     
+              </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contacts/Mentors</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">My Path to College</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Financial Aid</a>
+              </li>
+          </ul>
+          
+        </div>
+      </nav>
+        
+        <section class="bgimage">
+            <div class="overlay">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align:center;">
+                      <br style="font-size:150px;">
+                      <h1 style="font-size:100px; color: rgb(10, 5, 5);">Search</h1>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </section>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+        <!-- Google Custom Search Element -->
+<div id=”cse” style=”width:100%;”>Loading</div>
+<script src=”http://www.google.com/jsapi” type=”text/javascript”></script>
+<script type=”text/javascript”>google.load(‘search’, ‘1’);
+          google.setOnLoadCallback(function(){var cse = new google.search.
+          CustomSearchControl();cse.draw(‘cse’);}, true);</script>
+        <br>
+        <br>
+       
+          <header>
+            <h1>Results...</h1>
+  
+          </header>
+        </div>
+
+	</body>
+</html>
