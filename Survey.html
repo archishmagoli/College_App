@@ -62,12 +62,12 @@
   <body>
     <form>
       <p> What is your answer to the question? </p>
-      <input type="radio" name = "ans" value="12th"> I am a 12th grader in high school </br>
-      <input type="radio" name = "ans" value="11th"> I am a 11th grader in high school </br>
-      <input type="radio" name = "ans" value="10th"> I am a 10th grader in high school </br>
-      <input type="radio" name = "ans" value="9th"> I am a 9th grader in high school </br>
-      <input type="radio" name = "ans" value="Middle" checked> I am in Middle School</br>
-      <input type="radio" name = "ans" value="Other"> Other </br>
+      <input type="radio" name = "ans" id = "12grade" value="12th"> I am a 12th grader in high school </br>
+      <input type="radio" name = "ans" id = "11grade" value="11th"> I am a 11th grader in high school </br>
+      <input type="radio" name = "ans" id = "10grade" value="10th"> I am a 10th grader in high school </br>
+      <input type="radio" name = "ans" id = "9grade" value="9th"> I am a 9th grader in high school </br>
+      <input type="radio" name = "ans" id = "Mgrade" value="Middle" checked> I am in Middle School</br>
+      <input type="radio" name = "ans" id = "Ograde" value="Other"> Other </br>
     </form>
   </body>
 </html>
@@ -76,14 +76,14 @@
 <fieldset>
   <label for="Gender">How do you describe yourself? Check All That Apply</label>
   <p>
-    <input type="checkbox" name="answer" value="Cre">Creative<br>
-    <input type="checkbox" name="answer" value="Lea">Natural Leader<br>
-    <input type="checkbox" name="answer" value="Hard">Hardworker<br>
-    <input type="checkbox" name="answer" value="Amb" checked>Ambitious and Passionate<br>
-    <input type="checkbox" name="answer" value="Middle" checked>Excellent communicator<br>
-    <input type="checkbox" name="answer" value="Other" checked> Highly organized<br>
-    <input type="checkbox" name="answer" value="Other"> Adventurous<br>
-    <input type="checkbox" name="answer" value="Other" checked> Always Curious<br>
+    <input type="checkbox" name="answer" id = "Create" value="Cre">Creative<br>
+    <input type="checkbox" name="answer" id = "Leader" value="Lea">Natural Leader<br>
+    <input type="checkbox" name="answer" id = "Worker" value="Hard">Hardworker<br>
+    <input type="checkbox" name="answer" id = "Passion" value="Amb" checked>Ambitious and Passionate<br>
+    <input type="checkbox" name="answer" id = "commu" value="Middle" checked>Excellent communicator<br>
+    <input type="checkbox" name="answer" id = "Organi" value="Other" checked> Highly organized<br>
+    <input type="checkbox" name="answer" id = "Adv" value="Other"> Adventurous<br>
+    <input type="checkbox" name="answer" id = "Curio" value="Other" checked> Always Curious<br>
 
   </p>
 </fieldset>
@@ -97,28 +97,18 @@
     <textarea id="msg" name="user_message" rows="4" cols="50" placeholder="Enter Text Here"></textarea>   </div>
   <div>
 </fieldset>
-
-<div id="submitbutton">
-  <button type="submit" id="submit">Submit</button>   </div>
-
-</form>
 </div>
 
-<!-- 
-<script type="text/javascript">
-if (button type = "button". checked == true)
-  {
-      var radioButtons = document.getElementsByName("yes");
-      for(var i = 0; i < radioButtons.length; i++)
-      {
-          if(radioButtons[i].checked == true)
-          {
-              if(confirm("You have selected " + radioButtons[i].value ))
-                  return true;
-              else
-                  return false;
-          }
-      }
-  }
-  </script>
-  -->
+<!-- resuly-->
+
+<button onclick="myFunction()">Try it</button>
+
+  
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("12grade").checked;
+  document.getElementById("demo").innerHTML = <button onclick = "document.location.href='https://www.google.com/?safe=active&ssui=on'">Try it</button>;
+}
+</script>
