@@ -1,26 +1,26 @@
 {% extends "layout.html" %}
 {% block body %}
-      <div class="checklist">
-        <div class="row justify-center">
-            <div class="col-12">
-                <div class="input-group mb-3">
-                    <input id="userinput" type="text" class="form-control" placeholder="add an item..." aria-label="Add an item" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                    <button class="btn btn-outline-info" id="enter" type="button">Add</button>
-                    </div>
-                </div>
-          
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="check1" checked>
-                        <label class="custom-control-label" for="check1">Example Item</label>
-                        <label class="contentcontainer med left" style="margin-left: 200px;" class="custom-control-label" for="check1">Due Date</label>
-                    </div>
-                    </li>
-                </ul>
+<title>My Checklist</title>
+<div class="checklist">
+<div class="row justify-center">
+    <div class="col-12">
+        <div class="input-group mb-3">
+            <input id="userinput" type="text" class="form-control" placeholder="add an item..." aria-label="Add an item" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+            <button class="btn btn-outline-info" id="enter" type="button">Add</button>
             </div>
         </div>
-      </div>
-
+    
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="check1" checked>
+                <label class="custom-control-label" for="check1">Example Item</label>
+                <label class="contentcontainer med left" style="margin-left: 200px;" class="custom-control-label" for="check1">Due Date</label>
+            </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
 {% endblock %}
