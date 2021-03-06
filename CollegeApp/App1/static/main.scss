@@ -1,0 +1,15 @@
+$theme-colors: (
+    "primary": #ce6785, 
+    "secondary": #5c374c,
+    "success": #739960, 
+    "info": #ff8c61, 
+    "warning": #f08928, 
+    "danger": #f44336, 
+    "light": #fbf9fb, 
+    "dark-accent": #faa275,
+    "dark-shade": #ff8c61
+); 
+
+
+// Should be at the very end!
+@import "../node_modules/bootstrap/scss/bootstrap.scss"; 

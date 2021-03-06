@@ -27,6 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+STATICFILES_DIRS = [
+    "/Desktop/College_App/CollegeApp/App1/static", 
+]
+
 
 # Application definition
 
