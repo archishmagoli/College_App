@@ -21,5 +21,6 @@ urlpatterns = [
     path('App1', include('App1.urls')),
     path('', include('index.urls')),  
     path('login', include('login.urls')), 
-    path('createaccount', include('createaccount.urls'))
+    path('createaccount', include('createaccount.urls')),
+    path('calendar', include('mycalendar.urls'))
 ]
