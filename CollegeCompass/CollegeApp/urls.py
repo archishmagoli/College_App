@@ -24,5 +24,6 @@ urlpatterns = [
     path('createaccount', include('createaccount.urls')),
     path('calendar', include('mycalendar.urls')),
     path('contacts', include('contacts.urls')),
-    path('checklist', include('checklist.urls'))
+    path('checklist', include('checklist.urls')), 
+    path('mycolleges', include('mycolleges.urls'))
 ]

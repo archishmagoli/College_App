@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'mycalendar', 
     'contacts', 
     'checklist',
+    'mycolleges',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
