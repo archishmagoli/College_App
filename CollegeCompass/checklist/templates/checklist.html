@@ -24,3 +24,31 @@
 </div>
 </div>
 {% endblock %}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelector('#enter').disabled = true; 
+
+        document.querySelector('#userinput').onkeyup = () => {
+            if(document.querySelector('#task').value.length > 0) {
+                document.querySelector('#enter').disabled = false; 
+            } else {
+                document.querySelector('#enter').disabled = true;
+            }
+        }
+    
+    document.querySelector('form').onsubmit = () => {
+        const task = document.querySelector('#userinput').value;
+        const li = document.createElement('li');
+        li.innerHTML = task; 
+
+        document.querySelector('#userinputs').append(li);
+
+        document.querySelector('#userinput').value = ''; 
+
+        //stop form from submitting
+        return false;
+    }
+    
+    })
+</script>
