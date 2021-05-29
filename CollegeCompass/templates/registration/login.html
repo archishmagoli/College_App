@@ -1,0 +1,30 @@
+{% extends "first.html" %}
+
+{% block content %}
+<title>Login</title>
+<div style="height: 100px; max-width: 100%;"> </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col text-left">
+      <h1>Login</h1>
+      <br>
+      <form method="post">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100px; color: white; background-color: #19b5f3;">Log In</button>
+      </form>
+      <br>
+      <a href="../password_reset/" style="color: #19b5f3;">Forgot password?</a>
+      <br>
+      <a href="{% url 'signup' %}" style="color: #19b5f3;">Don't have an account? Make one here.</a>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+
+<div style="height: 300px; max-width: 100%;"> </div>
+
+{% endblock %}
+

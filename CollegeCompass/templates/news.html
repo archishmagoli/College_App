@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+       <h1>Hello, {{ user.username }}!</h1>
+        <p></p>
+        <br>
+        <br>
+        <p><a href="{% url 'logout' %}"><button type="button" class="btn btn-primary btn-lg" style="height: 50px; width: 150px; background-color: #19b5f3; color: white">Log Out</button></a></p>
+    {% else %}
+    <p> You are not logged in. </p>
+    <a href="{% url 'login' %}">Log In</a>
+    {% endif %}
+    <title>News</title>
+{% endblock %}
