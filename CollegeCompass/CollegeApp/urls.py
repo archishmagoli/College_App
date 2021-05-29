@@ -15,13 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.views.generic.base import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('App1', include('App1.urls')),
-    path('', include('index.urls')),  
+    path('', include('index.urls')),   
     path('login', include('login.urls')), 
-    path('createaccount', include('createaccount.urls')),
+    path('accounts/', include('createaccount.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
     path('calendar', include('mycalendar.urls')),
     path('contacts', include('contacts.urls')),
     path('checklist', include('checklist.urls')), 
@@ -29,4 +30,5 @@ urlpatterns = [
     path('health', include('health.urls')),
     path('financialaid', include('financialaid.urls')),
     path('path2college', include('path2college.urls')),
+    path('news', TemplateView.as_view(template_name='news.html'), name='news')
 ]

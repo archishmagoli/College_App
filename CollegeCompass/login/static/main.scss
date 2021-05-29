@@ -1,5 +1,5 @@
 $theme-colors: (
-    "primary": #8CCAE3, 
+    "primary": #19b5f3, 
     "info": #00ffea, 
     "success": #37ca2b, 
     "warning": #f8c13b, 
@@ -13,4 +13,4 @@ $theme-colors: (
 
 // Should be at the very end!
 @import "https://fonts.googleapis.com/css?family=Hind%20Madurai";
-@import "../node_modules/bootstrap/scss/bootstrap.scss"; 
+@import "../bootstrap/scss/bootstrap.scss"; 

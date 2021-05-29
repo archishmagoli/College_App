@@ -25,17 +25,17 @@ SECRET_KEY = 'ycj7r_ngynkouy%pf=@$d)wfqtb*8907n@p5klt@1_had-p(sy'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+
 ALLOWED_HOSTS = []
 
 STATICFILES_DIRS = [
-    "/Desktop/College_App/CollegeApp/App1/static", 
 ]
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'App1',
     'index', 
     'login',
     'createaccount',
@@ -69,7 +69,7 @@ ROOT_URLCONF = 'CollegeApp.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [str(BASE_DIR.joinpath('templates'))],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -133,3 +133,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+LOGIN_REDIRECT_URL = '../../news'
+LOGOUT_REDIRECT_URL = "/"
+
+EMAIL_FILE_PATH = str(BASE_DIR.joinpath('sent_emails'))
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'hostname@gmail.com'
+EMAIL_HOST_PASSWORD = 'otdwznctjbaaoeju'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'default from email'
