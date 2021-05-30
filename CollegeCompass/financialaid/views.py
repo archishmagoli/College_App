@@ -4,4 +4,4 @@ from . import urls
 
 # Create your views here.
 def index(request):
-    return render(request, "financial_aid.html")
+    return render(request, "financialaid.html")

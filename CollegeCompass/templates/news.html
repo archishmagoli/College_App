@@ -1,15 +1,77 @@
 {% extends "layout.html" %}
 
 {% block content %}
-    {% if user.is_authenticated %}
-       <h1>Hello, {{ user.username }}!</h1>
-        <p></p>
-        <br>
-        <br>
-        <p><a href="{% url 'logout' %}"><button type="button" class="btn btn-primary btn-lg" style="height: 50px; width: 150px; background-color: #19b5f3; color: white">Log Out</button></a></p>
-    {% else %}
-    <p> You are not logged in. </p>
-    <a href="{% url 'login' %}">Log In</a>
-    {% endif %}
-    <title>News</title>
+<title>News</title>
+<head>
+  <style>
+      input { 
+          width: 100%; 
+          padding: 12px 20px;
+          margin: 8px 0;
+          box-sizing: border-box;
+      }
+
+      .item-row {
+          background-color: gainsboro; 
+          margin: 10px;
+          padding: 20px;
+          border-radius: 3px;
+          font-size: 16px;
+          box-shadow: 0px -1px 10px 4-4px rgba(0, 0, 0, 0.75);
+      }
+
+      .center-column {
+          width: 600px;
+          margin: 20px auto; 
+          padding: 20px;
+          background-color: fff; 
+          border-radius: 3px;
+          box-shadow: 6px 2px 30px 0px rgba(0, 0, 0.75);
+      }
+
+  </style>
+</head>
+
+  {% if user.is_authenticated %}
+      <br>
+      <br>
+      <h1>Hello, {{ user.username }}!</h1>
+      <div class="overlay">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align:center;">
+                <br style="font-size:150px;">
+                <h1 style="font-size:100px; color: rgb(10, 5, 5);">News</h1>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <div class="center-column">
+        <h3>The College Admissions Crucible</h3>
+        <h5>Updated: May 29, 2021</h5>
+        <p>Just in time for the nervous weeks of March and April when college rejections and acceptances go out to America’s high-school seniors, Netflix released “Operation Varsity Blues: The College Admissions Scandal,” a documentary that tells how the admissions maestro Rick Singer helped rich people, including the actors Lori Loughlin and Felicity Huffman, cheat their kids into highly selective colleges and universities, and how they got caught.</p>
+        <a href="https://www.newyorker.com/culture/cultural-comment/the-college-admissions-crucible">Source: The New Yorker</a>
+      </div>
+
+      <div class="center-column">
+        <h3>The Persisent Grip of Social Class on College Admissions</h3>
+        <h5>Updated: May 28, 2021</h5>
+        <p>It’s hard to disentangle social class from the college admissions process. The University of California system says it’s trying, announcing recently that it’s dropping consideration of the SAT and ACT. (It was part of a settlement in a lawsuit alleging that the tests are biased along lines of race, wealth and disability.)</p>
+        <a href="https://www.nytimes.com/2021/05/26/upshot/college-admissions-essay-sat.html">Source: The New York Times</a>
+      </div>
+
+      <div class="center-column">
+        <h3>Colorado Becomes 1st State To Ban Legacy College Admissions</h3>
+        <h5>Updated: May 27, 2021</h5>
+        <p>When someone applies to college, there's often a box or a section on the application that asks about any relatives who attended the university — perhaps a parent or a cousin. This is called "legacy," and for decades it's given U.S. college applicants a leg up in admissions. But no longer in Colorado's public colleges.</p>
+        <a href="https://www.npr.org/2021/05/27/1000868262/colorado-becomes-first-state-to-ban-legacy-college-admissions">Source: NPR Education</a>
+      </div>
+      
+      <p style="text-align: center;"><a href="{% url 'logout' %}"><button type="button" class="btn btn-primary btn-lg" style="height: 50px; width: 150px; background-color: #19b5f3; color: white">Log Out</button></a></p>
+  {% else %}
+  <p> You are not logged in. </p>
+  <a href="{% url 'login' %}">Log In</a>
+  {% endif %}
+
 {% endblock %}
