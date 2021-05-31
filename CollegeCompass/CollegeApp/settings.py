@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -18,9 +19,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/tasks/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'ycj7r_ngynkouy%pf=@$d)wfqtb*8907n@p5klt@1_had-p(sy'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -95,6 +93,7 @@ DATABASES = {
     }
 }
 
+SECRET_KEY = config("SECRET_KEY")
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -140,8 +139,7 @@ LOGOUT_REDIRECT_URL = "/"
 EMAIL_FILE_PATH = str(BASE_DIR.joinpath('sent_emails'))
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'hostname@gmail.com'
-EMAIL_HOST_PASSWORD = 'otdwznctjbaaoeju'
+EMAIL_HOST_USER = 'djangohostname@gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'default from email'
