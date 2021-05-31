@@ -49,7 +49,10 @@ The folder ```CollegeCompass``` is the project folder in the repository. In this
    * ```layout.html``` - contains code for the navigation bar of the platform that is extended to most other pages in the application. 
    * ```news.html``` - the first screen that logged-in users see on the platform; it shows recent published news articles regarding the college admissions process. 
 
-* ```manage.py``` - default Django Python file provided to run the Django project and start the development server. 
+* ```manage.py``` - default Django Python file provided to run the Django project and start the development server.
+
+#### Default Django Files
+* Default Django files include ```views.py```, ```urls.py```, ```admin.py```, and other files that are added by default by Django in each application. For some of the applications, there is additional code beyond the default imports that includes functionality unique to the particular parent folder the Python file is in, whether that's ```createaccount```, ```tasks```, or others.
 
 ### Installation 
 This project uses the *Django Web Framework*, so there are a few installation steps to run the project. 
