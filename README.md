@@ -65,9 +65,15 @@ This project uses the *Django Web Framework*, so there are a few installation st
 * Run ```python manage.py runserver``` to start the server.
 * Visit http://127.0.0.1:8000/ to access the project. 
 
+### References
+Here are the videos and courses we referenced to create the platform:
+* [Creating a To-Do Application in Django](https://www.youtube.com/watch?v=4RWFvXDUmjo)
+* [Bootstrap Theme Customization with SASS](https://www.youtube.com/watch?v=6Ovw43Dkp44)
+* [CS50 - Web Programming with Python & JavaScript](https://cs50.harvard.edu/web/2020/)
+
 ### Credits
 This project was created as part of the MetroHacks EmpowHer CS Competition. The main contributors to this platform are:
-* Archishma Goli
+* Archishma Goli (Team Lead)
 * Ananya Radhakrishnan
 * Sophiya Singh
 * Salini Ambadapudi
