@@ -22,6 +22,7 @@ The folder ```CollegeCompass``` is the project folder in the repository. In this
    * ```index.html``` - this is the first screen that users see when they access the platform. It includes buttons and links to login, register, and learn more about the application. 
 
 * ```mycalendar``` - includes default Django files. Also includes (in the ```templates``` folder):
+   * ```calendar.html``` - user interface code for viewing monthly calendars and adding/deleting events. 
 
 * ```mycolleges``` - includes default Django files. Also includes (in the ```templates``` folder):
    * ```mycolleges.html``` - contains code for the interface the user will see when trying to add Safety, Reach, or Match schools to their college list on the page.
