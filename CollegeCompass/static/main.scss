@@ -1,0 +1,16 @@
+$theme-colors: (
+    "primary": #19b5f3, 
+    "info": #00ffea, 
+    "success": #37ca2b, 
+    "warning": #f8c13b, 
+    "danger": #f21d1d, 
+    "secondary": #ee2e76, 
+    "light": #f7f2d7, 
+    "dark-accent": #7329e2, 
+    "dark-shade": #0932f4
+); 
+
+
+// Should be at the very end!
+@import "https://fonts.googleapis.com/css?family=Hind%20Madurai";
+@import "../node_modules/bootstrap/scss/bootstrap.scss"; 
