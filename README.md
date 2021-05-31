@@ -1,17 +1,24 @@
-## CollegeCompass 
+# CollegeCompass 
 
-# Description
+### Description
 CollegeCompass is a platform designed to help high school students navigate the college admissions process in an organized, less stressful way. The platform allows students to create checklists, add various colleges to their list, and access important mental health & financial aid resources. 
 
-Table of Contents: Optionally, include a table of contents in order to allow other people to quickly navigate especially long or detailed READMEs.
+### Table of Contents
+* 
 
-Installation: Installation is the next section in an effective README. Tell other users how to install your project locally. Optionally, include a gif to make the process even more clear for other people.
+### Installation 
+This project uses the *Django Web Framework*, so there are a few installation steps to run the project. 
 
-Usage: The next section is usage, in which you instruct other people on how to use your project after they’ve installed it. This would also be a good place to include screenshots of your project in action.
+#### How to Run the Project
+Clone the repository with ```git clone https://github.com/archishmagoli/College_App/```. Then from the root of the repo:
+* Install [pip](https://pip.pypa.io/en/stable/installing/) and [Django](https://docs.djangoproject.com/en/3.2/topics/install/). 
+* Run ```python manage.py runserver``` to start the server.
+* Visit http://127.0.0.1:8000/ to access the project. 
 
-Contributing: Larger projects often have sections on contributing to their project, in which contribution instructions are outlined. Sometimes, this is a separate file. If you have specific contribution preferences, explain them so that other developers know how to best contribute to your work. To learn more about how to help others contribute, check out the guide for setting guidelines for repository contributors.
-
-Credits: Include a section for credits in order to highlight and link to the authors of your project.
-
-License: Finally, include a section for the license of your project. For more information on choosing a license, check out GitHub’s licensing guide!
+### Credits
+This project was created as part of the MetroHacks EmpowHer CS Competition. The main contributors to this platform are:
+* Archishma Goli
+* Ananya Radhakrishnan
+* Sophiya Singh
+* Salini Ambadapudi
 
