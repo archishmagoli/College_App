@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'index', 
     'login',
     'createaccount',
-    'mycalendar', 
+    'events', 
     'contacts', 
     'mycolleges',
     'path2college',
