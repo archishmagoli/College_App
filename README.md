@@ -6,7 +6,9 @@ CollegeCompass is a platform designed to help high school students navigate the 
 ### Table of Contents
 The folder ```CollegeCompass``` is the project folder in the repository. In this project, there are several application folders that constitute the project. 
 * ```contacts``` - includes default Django files. *These default Django files contain Python code that allows users to create, update, and delete contacts on the page.* Also includes (in the ```templates``` folder):
-   * ```contacts.html``` - allows users to see their list of contacts and mentors.
+   * ```contacts.html``` - allows users to see their list of contacts and mentors. Users can also add new contacts on the page. 
+   * ```update_contact.html``` User is directed to this page if they decide to modify a contact in their list.
+   * ```remove_contact.html``` - User is directed to this page if they decide to delete a contact from their list. 
 
 * ```createaccount``` - includes default Django files. *These default Django files contain Python code that allows users to create an account on the platform.* Also includes (in the ```templates``` folder):
    * ```second.html``` - contains code (including the title overlay) that is extended in ```signup.html```
@@ -25,7 +27,9 @@ The folder ```CollegeCompass``` is the project folder in the repository. In this
    * ```calendar.html``` - user interface code for viewing monthly calendars and adding/deleting events. 
 
 * ```mycolleges``` - includes default Django files. Also includes (in the ```templates``` folder):
-   * ```mycolleges.html``` - contains code for the interface the user will see when trying to add Safety, Reach, or Match schools to their college list on the page.
+   * ```mycolleges.html``` - contains code for the interface the user will see when trying to add Safety, Reach, or Match schools to their college list on the page. Users can also choose to add a new college to either of the three school lists on the page. 
+   * ```update_college.html``` User is directed to this page if they decide to modify a college in any list.
+   * ```remove_college.html``` - User is directed to this page if they decide to delete a college from any list. 
 
 * ```path2college``` - includes default Django files. Also includes (in the ```templates``` folder):
    * ```path2college.html``` - user interface code; shows options for adding GPA, test scores, and other important information that would be important to know on the path to college. 
@@ -33,15 +37,19 @@ The folder ```CollegeCompass``` is the project folder in the repository. In this
 * ```search``` - includes default Django files. Also includes (in the ```templates``` folder):
    * ```search.html``` - this has not been programmed yet, but it will include a search bar for users to type into and to search items on the platform. 
 
+* ```sent_emails``` - includes records of sample emails that were sent when a user requested to reset their password. 
+   * Although the email mechanism isn't fully functional yet, the team is currently working to write backend functionality for the mechanism. 
+
 * ```static``` - includes:
    * ```img``` folder - has a placeholder image for an image overlay. 
-   * Bootstrap files, including ```main.css```, ```main.css.map```, ```main.scss```, and ```package-lock.json```. 
+   * Bootstrap files, including ```main.css```, ```main.css.map```, ```main.scss```, ```style.css```, and ```package-lock.json```. 
+      * The two main stylesheets used on this platform are ```main.css``` and ```style.css```. 
 
 * ```survey``` - includes default Django files. Also includes (in the ```templates``` folder):
    * ```survey.html``` - this has not been programmed yet, but it will include a set of questions for the user to answer to determine their purpose for using the app and other user information, including grade, intended major, etc. 
 
 * ```tasks``` - includes default Django files. *In these Django files, there are models used to create a form that allows users to create, modify, and delete items from a checklist.* Also includes (in the ```templates``` folder):
-   * ```checklist.html``` - Shows the checklist the user created. 
+   * ```checklist.html``` - Shows the checklist the user created. Users can also add new tasks to the list on the page. 
    * ```delete.html``` - User is directed to this page if they decide to delete an item from their checklist. 
    * ```update_task.html``` - User is directed to this page if they decide to modify an item from their checklist.
 
@@ -70,6 +78,8 @@ Here are the videos and courses we referenced to create the platform:
 * [Creating a To-Do Application in Django](https://www.youtube.com/watch?v=4RWFvXDUmjo)
 * [Bootstrap Theme Customization with SASS](https://www.youtube.com/watch?v=6Ovw43Dkp44)
 * [CS50 - Web Programming with Python & JavaScript](https://cs50.harvard.edu/web/2020/)
+* [Geeks for Geeks - Django Tutorials](https://www.geeksforgeeks.org/django-tutorial/)
+* [Stack Overflow - for specific functionality questions](https://stackoverflow.com/)
 
 ### Credits
 This project was created as part of the MetroHacks EmpowHer CS Competition. The main contributors to this platform are:

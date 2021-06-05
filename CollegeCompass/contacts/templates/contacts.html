@@ -2,41 +2,8 @@
 
 {% block content %}
 <title>Contacts</title>
-<head>
-    <style>
-        input { 
-            width: 100%; 
-            padding: 12px 20px;
-            margin: 8px 0;
-            box-sizing: border-box;
-        }
-  
-        .item-row {
-            border-radius: 3px;
-            font-size: 16px;
-            box-shadow: 0px -1px 10px 4-4px rgba(0, 0, 0, 0.75);
-        }
-  
-        .center-column {
-            width: 600px;
-            margin: 20px auto; 
-            padding: 20px;
-            background-color: fff; 
-            border-radius: 3px;
-            box-shadow: 6px 2px 30px 0px rgba(0, 0, 0.75);
-        }
-
-        .centered {
-            margin-left: auto;
-            margin-right: auto;
-        }
-  
-    </style>
-</head>
 
 {% if user.is_authenticated %}
-    <br>
-    <br>
     <div class="overlay">
         <div class="container-fluid">
           <div class="row">
@@ -48,46 +15,47 @@
         </div>
     </div>
 
-    <div class="center-column" style="text-align: center;">
-      <a class="btn btn-primary" style="color: white; background-color: #19b5f3" href="">Add a Contact</a>
+    <div class="center-column">
+      <div style="text-align: center;"><button onclick="showDiv()" class="btn btn-primary" style="background-color: #19b5f3; color: white;">Add a Contact</button></div>
     </div>
 
-    <div class="center-column">
-      <h3>Contact #1</h3>
-      <h5>Contact Number: 123-456-7890</h5>
-      <img class="centered" src="https://docadvocates.com/wp-content/uploads/2019/08/generic-profile-pic.jpg" alt="Contact #1">
-      <p>Met her at the region hackathon this year. Enjoyed her workshop on artifical intelligence. She's a great mentor for CS-related things.</p>
-      <div class="item-row">
-        <a class="btn btn-info" href="">Update</a>
-        <a class="btn btn-danger" href="">Delete</a>
-      </div>
+    <div class="center-column" id="contact-div" style="display: none;">
+      <h2>Add a Contact</h2>
+      <form method="POST" action="/contacts" enctype="mutipart/form-data">
+        {% csrf_token %}
+        {{ form }}
+        <br>
+        <br>
+        <div style="text-align: center;"><button type="submit" class="btn btn-primary" style="background-color: #19b5f3; color: white;" name="Create Contact">Create Contact</button></div>
+      </form>
     </div>
-
+    <br>
+    
     <div class="center-column">
-      <h3>Contact #2</h3>
-      <h5>Contact Number: 123-456-7890</h5>
-      <img class="centered" src="data:image/png;base64,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" alt="Contact #2">
-      <p>Business professional working at a large tech company; we connected at the Student Leadership Conference. Great contact for finding leadership opportunities in business/tech.</p>
-      <div class="item-row">
-        <a class="btn btn-info" href="">Update</a>
-        <a class="btn btn-danger" href="">Delete</a>
-      </div>
-    </div>
-
-    <div class="center-column">
-      <h3>Contact #3</h3>
-      <h5>Contact Number: 123-456-7890</h5>
-      <img class="centered" src="data:image/png;base64,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" alt="Contact #3">
-      <p>Just-graduated senior who went to high school with me. Met her at a few of my classes and learned that she was very interested (and is now majoring) in cybersecurity. Good reference for application questions about University X and for general college/life advice.</p>
-      <div class="item-row">
-        <a class="btn btn-info" href="">Update</a>
-        <a class="btn btn-danger" href="">Delete</a>
-      </div>
+      {% for contact in contacts %}
+          <h2>{{ contact.name }}</h2>
+          <h5>Contact number: {{ contact.phone }}</h5>
+          <h5>Email address: {{ contact.email }}</h5>
+          <p>{{ contact.description }}</p>
+          <a class="btn btn-info" href="{% url 'update_contact' contact.id %}">Update</a>
+          <a class="btn btn-danger" href="{% url 'remove_contact' contact.id %}">Delete</a>
+      {% endfor %}
     </div>
       
   {% else %}
   <p> You are not logged in. </p>
   <a href="{% url 'login' %}">Log In</a>
   {% endif %}
+
+  <script>
+    function showDiv() {
+    var x = document.getElementById("contact-div");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+  </script>
 
 {% endblock %}

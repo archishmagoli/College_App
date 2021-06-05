@@ -17,28 +17,44 @@
 
   <br style="height: 20px;">
 
+  <div class="center-column">
+    <div style="text-align: center;"><button onclick="showDiv()" class="btn btn-primary" style="background-color: #19b5f3; color: white;">Add a College</button></div>
+  </div>
+
+  <div class="center-column" id="college-div" style="display: none;">
+    <h2>Add a College</h2>
+    <form method="POST" action="/mycolleges">
+      {% csrf_token %}
+      {{ form|linebreaks }}
+      <br>
+      <div style="text-align: center;"><button type="submit" class="btn btn-primary" style="background-color: #19b5f3; color: white;" name="Add College">Add College</button></div>
+    </form>
+  </div>
+  <br>
+
+  
   <div class="container">
     <div class="row justify-center">
       <div class="col-12">
         <header>
           <h1>Safety Schools</h1>
-
         </header>
-        <div class="input-group mb-3">
-          <input id="userinput" type="text" class="form-control" placeholder="add an item..." aria-label="Add an item" aria-describedby="basic-addon2">
-          <div class="input-group-append">
-            <button class="btn btn-outline-info" id="enter" type="button">Add</button>
-          </div>
+        <div class="safeties-list">
+          {% for college in colleges %}
+            {% if college.category == "Safety" %}
+            <div class="item-row">
+                <h5>{{ college.name }}</h5>
+                <p>{{ college.description }}</p>
+                <a class="btn btn-info" href="{% url 'update_college' college.id %}">Update</a>
+                <a class="btn btn-danger" href="{% url 'remove_college' college.id %}">Delete</a>
+            </div>
+            {% endif %}
+          {% endfor %}
         </div>
-
-      </div>
-      <div class="col-12">
-        <ul class="list-group">
-          <li class="list-group-item">Georgia State University</li>
-        </ul>
       </div>
     </div>
   </div>
+  
 
   <br style="height: 20px;">
 
@@ -47,20 +63,19 @@
       <div class="col-12">
         <header>
           <h1>Match Schools</h1>
-
         </header>
-        <div class="input-group mb-3">
-          <input id="userinput" type="text" class="form-control" placeholder="add an item..." aria-label="Add an item" aria-describedby="basic-addon2">
-          <div class="input-group-append">
-            <button class="btn btn-outline-info" id="enter" type="button">Add</button>
-          </div>
+        <div class="safeties-list">
+          {% for college in colleges %}
+            {% if college.category == "Match" %}
+            <div class="item-row">
+                <h5>{{ college.name }}</h5>
+                <p>{{ college.description }}</p>
+                <a class="btn btn-info" href="{% url 'update_college' college.id %}">Update</a>
+                <a class="btn btn-danger" href="{% url 'remove_college' college.id %}">Delete</a>
+            </div>
+            {% endif %}
+          {% endfor %}
         </div>
-
-      </div>
-      <div class="col-12">
-        <ul class="list-group">
-          <li class="list-group-item">University of Georgia</li>
-        </ul>
       </div>
     </div>
   </div>
@@ -72,23 +87,34 @@
       <div class="col-12">
         <header>
           <h1>Reach Schools</h1>
-
         </header>
-        <div class="input-group mb-3">
-          <input id="userinput" type="text" class="form-control" placeholder="add an item..." aria-label="Add an item" aria-describedby="basic-addon2">
-          <div class="input-group-append">
-            <button class="btn btn-outline-info" id="enter" type="button">Add</button>
-          </div>
+        <div class="safeties-list">
+          {% for college in colleges %}
+            {% if college.category == "Reach" %}
+            <div class="item-row">
+                <h5>{{ college.name }}</h5>
+                <p>{{ college.description }}</p>
+                <a class="btn btn-info" href="{% url 'update_college' college.id %}">Update</a>
+                <a class="btn btn-danger" href="{% url 'remove_college' college.id %}">Delete</a>
+            </div>
+            {% endif %}
+          {% endfor %}
         </div>
-
-      </div>
-      <div class="col-12">
-        <ul class="list-group">
-          <li class="list-group-item">Stanford University</li>
-        </ul>
       </div>
     </div>
   </div>
+
   <div style="height: 200px;"></div>
+
+  <script>
+    function showDiv() {
+    var x = document.getElementById("college-div");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+  </script>
 
 {% endblock %}
