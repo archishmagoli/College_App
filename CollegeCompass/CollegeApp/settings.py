@@ -11,7 +11,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
-from decouple import config
+import os
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -30,6 +31,7 @@ ALLOWED_HOSTS = []
 STATICFILES_DIRS = [
 ]
 
+STATIC_URL = '/static/'
 
 # Application definition
 
@@ -93,7 +95,7 @@ DATABASES = {
     }
 }
 
-SECRET_KEY = config("SECRET_KEY")
+SECRET_KEY = 'ycj7r_ngynkouy%pf=@$d)wfqtb*8907n@p5klt@1_had-p(sy'
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -131,7 +133,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
 
 LOGIN_REDIRECT_URL = '../../news'
 LOGOUT_REDIRECT_URL = "/"
