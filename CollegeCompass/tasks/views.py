@@ -5,14 +5,16 @@ from .forms import *
 
 # Create your views here.
 def index(request):
-    tasks = Task.objects.all()
+    tasks = Task.objects.filter(user=request.user)
 
-    form = TaskForm()
+    form = TaskForm({'user': request.user})
 
     if request.method == "POST":
         form = TaskForm(request.POST)
         if form.is_valid:
-            form.save()
+            listForm = form.save(commit=False)
+            listForm.user = request.user
+            listForm.save()
         return redirect('/tasks')
 
     context = {'tasks':tasks, 'form': form}

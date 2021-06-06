@@ -5,14 +5,16 @@ from .forms import *
 
 # Create your views here.
 def index(request):
-    colleges = College.objects.all()
+    colleges = College.objects.filter(user=request.user)
 
     form = CollegeForm()
 
     if request.method == "POST":
         form = CollegeForm(request.POST)
         if form.is_valid:
-            form.save()
+            collegeForm = form.save(commit=False)
+            collegeForm.user = request.user
+            collegeForm.save()
         return redirect('/mycolleges')
 
     context = {'colleges': colleges, 'form': form}

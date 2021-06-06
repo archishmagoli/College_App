@@ -5,14 +5,16 @@ from .forms import *
 
 # Create your views here.
 def index(request):
-    contacts = Contact.objects.all()
+    contacts = Contact.objects.filter(user=request.user)
 
     form = ContactForm()
 
     if request.method == "POST":
         form = ContactForm(request.POST)
         if form.is_valid:
-            form.save()
+            contactForm = form.save(commit=False)
+            contactForm.user = request.user
+            contactForm.save()
         return redirect('/contacts')
 
     context = {'contacts': contacts, 'form': form}
