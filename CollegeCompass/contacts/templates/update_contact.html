@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<title>Update Contact</title>
+
+<div class="overlay">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align:center;">
+          <br style="font-size:150px;">
+          <h1 style="font-size:100px; color: rgb(10, 5, 5);">Update Contact</h1>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="center-column">
+    <br style="height: 10px;">
+    <h3>Update Your Contact</h3>
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" name="Update Contact" style="background-color: #19b5f3; color: white;">
+    </form>
+</div>
+
+{% endblock %}
